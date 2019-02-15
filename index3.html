@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Page Title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script defer src="script3.js"></script>
+        <style>
+            .filter {
+                width: 365px;
+                margin: 10px auto;
+                border: 3px solid black;
+            }
+
+            .sorting {
+                width: 365px;
+                margin: 10px auto;
+                border: 3px solid;
+            }
+
+            .input {
+                width: 585px;
+                margin: 10px auto;
+                border: 3px solid;
+            }
+
+            .input table {
+                width: 580px;
+                margin: 0px auto;
+            }
+
+            .input table, tr, th, td {
+                border: 2px solid black;
+                border-collapse: collapse;
+                text-align: center;
+            }
+
+            .tabel {
+                width: 360px;
+                margin: 10px auto;
+                border: 3px solid black;
+            }
+
+            .tabel table {
+                width: 350px;
+                margin: 0px auto;
+            }
+
+            .tabel table, tr, th, td {
+                border: 2px solid;
+                border-collapse: collapse;
+            }
+        </style>
+    </head>
+
+    <body>
+    <!--FILTER-->    
+        <fieldset class="filter">
+            <legend>Filter</legend>
+                <p>Nama : <input type="text" id="filterNama" oninput="filterName()"></p>
+                <p>Umur : <input type="number" id="filterUmur1" oninput="filterUmur()"> - <input type="number" id="filterUmur2" oninput="filterUmur()"></p>
+                <p>Pekerjaan : <select id="job"></select></p>
+                <button onclick="searchJob()">Search Job</button>
+                <p>Kelamin :    <input type="radio" name="filterKelamin" value="Pria">Pria
+                                <input type="radio" name="filterKelamin" value="Wanita">Wanita
+                </p>
+                <button onclick="filterGender()">Filter Gender</button>
+        </fieldset>
+
+
+    <!--SORTING-->    
+        <fieldset class="sorting">
+            <legend>Sorting</legend>
+                <button onclick="sortNama()">Sort Nama</button>
+                <button onclick="sortUmur()">Sort Umur</button>
+                <button onclick="sortKelamin()">Sort Kelamin</button>
+                <button onclick="sortPekerjaan()">Sort Pekerjaan</button>
+        </fieldset>
+
+
+    <!--INPUT-->
+        <fieldset class="input">
+            <legend>Input Data</legend>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Umur</th>
+                            <th>Pekerjaan</th>
+                            <th>Kelamin</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" id="inputNama"></td>
+                            <td><input type="number" id="inputUmur"></td>
+                            <td><input type="text" id="inputPekerjaan"></td>
+                            <td>
+                                <input type="radio" name="inputGender" value="Pria">Pria
+                                <input type="radio" name="inputGender" value="Wanita">Wanita
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <button onclick="submitInput(manusia)">Submit</button>
+        </fieldset>
+
+
+    <!--TAMPIL-->    
+        <fieldset class="tabel">
+            <legend>Tabel Data</legend>
+                <Table id="tabelData">
+                    <thead>
+                        <tr>
+                            <th>Nama</th>
+                            <th>Umur</th>
+                            <th>Pekerjaan</th>
+                            <th>Kelamin</th>
+                        </tr>
+                    </thead>
+                    <tbody id="showdata">
+
+                    </tbody>
+                </Table>
+        </fieldset>
+    </body>
+</html>
