@@ -136,7 +136,7 @@ filterGender = () => {
         td = tr[i].getElementsByTagName('td')[3]
 
         if (td) {
-            if (td.innerHTML.includes(kelamin)) {
+            if (td.innerHTML.includes(kelamin) || kelamin == 'All') {
                 tr[i].style.display = ''
             } else {
                 tr[i].style.display = 'none'
