@@ -29,7 +29,6 @@ tampilData = (manusia) => {
             pekerjaan.push(manusia[i].pekerjaan)
         }
     }
-    console.log(pekerjaan)
 
 //Menampilkan data pada array pekerjaan
     document.getElementById('job').innerHTML = ``
@@ -65,6 +64,7 @@ filterName = () => {
     var filterNama = document.getElementById('filterNama').value.toUpperCase(),
         tabelData = document.getElementById('tabelData'),
         tr = tabelData.getElementsByTagName('tr')
+    console.log(tr);
     
     for (let i = 0; i < tr.length; i++) {
         td = tr[i].getElementsByTagName('td')[0]
@@ -144,4 +144,20 @@ filterGender = () => {
         }
     }
     return
+}
+
+
+//SORTING NAMA
+sortNama = (manusia) => {
+    manusia.sort(function(a,b) {
+        if (a.nama < b.nama) {
+            return -1
+        } else if (a.nama > b.nama) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+
+    tampilData(manusia)
 }
