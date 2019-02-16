@@ -160,4 +160,16 @@ sortNama = (manusia) => {
     })
 
     tampilData(manusia)
+    return
+}
+
+
+//SORTING UMUR
+sortUmur = (manusia) => {
+    manusia.sort(function(a,b) {
+        return a.umur - b.umur
+    })
+
+    tampilData(manusia)
+    return
 }
