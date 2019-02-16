@@ -173,3 +173,20 @@ sortUmur = (manusia) => {
     tampilData(manusia)
     return
 }
+
+
+//SORTING PEKERJAAN 
+sortPekerjaan = (manusia) => {
+    manusia.sort (function(a,b) {
+        if (a.pekerjaan < b.pekerjaan) {
+            return -1
+        } else if (a.pekerjaan > b.pekerjaan) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+
+    tampilData(manusia)
+    return
+}
