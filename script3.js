@@ -190,3 +190,20 @@ sortPekerjaan = (manusia) => {
     tampilData(manusia)
     return
 }
+
+
+//SORTING KELAMIN
+sortKelamin = (manusia) => {
+    manusia.sort (function(a,b) {
+        if (a.kelamin < b.kelamin) {
+            return -1
+        } else if (a.kelamin > b.kelamin) {
+            return 1
+        } else {
+            return 0
+        }
+    })
+
+    tampilData(manusia)
+    return
+}
