@@ -14,7 +14,7 @@
             }
 
             .sorting {
-                width: 365px;
+                width: 400px;
                 margin: 10px auto;
                 border: 3px solid;
                 text-align: center;
@@ -63,13 +63,13 @@
     <!--FILTER-->    
         <fieldset class="filter">
             <legend>Filter</legend>
-                <p>Nama : <input type="text" id="filterNama" oninput="filterName()"></p>
-                <p>Umur : <input type="number" id="filterUmur1" oninput="filterUmur()"> - <input type="number" id="filterUmur2" oninput="filterUmur()"></p>
-                <p>Pekerjaan : <select id="job"></select></p>
+                <p>Name : <input type="text" id="filterNama" oninput="filterName()"></p>
+                <p>Age : <input type="number" id="filterUmur1" oninput="filterUmur()"> - <input type="number" id="filterUmur2" oninput="filterUmur()"></p>
+                <p>Occupation : <select id="job"></select></p>
                 <button onclick="searchJob()">Search Job</button>
-                <p>Kelamin :    <input type="radio" name="filterKelamin" value="All">All
-                                <input type="radio" name="filterKelamin" value="Pria">Pria
-                                <input type="radio" name="filterKelamin" value="Wanita">Wanita
+                <p>Gender :    <input type="radio" name="filterKelamin" value="All">All
+                                <input type="radio" name="filterKelamin" value="Man">Man
+                                <input type="radio" name="filterKelamin" value="Woman">Woman
                 </p>
                 <button onclick="filterGender()">Filter Gender</button>
         </fieldset>
@@ -78,10 +78,10 @@
     <!--SORTING-->    
         <fieldset class="sorting">
             <legend>Sorting</legend>
-                <button onclick="sortNama(manusia)">Sort Nama</button>
-                <button onclick="sortUmur(manusia)">Sort Umur</button>
-                <button onclick="sortPekerjaan(manusia)">Sort Pekerjaan</button>
-                <button onclick="sortKelamin(manusia)">Sort Kelamin</button>
+                <button onclick="sortNama(manusia)">Sort by Name</button>
+                <button onclick="sortUmur(manusia)">Sort by Age</button>
+                <button onclick="sortPekerjaan(manusia)">Sort by Occupation</button>
+                <button onclick="sortKelamin(manusia)">Sort by Gender</button>
         </fieldset>
 
 
@@ -91,10 +91,10 @@
                 <table>
                     <thead>
                         <tr>
-                            <th>Nama</th>
-                            <th>Umur</th>
-                            <th>Pekerjaan</th>
-                            <th>Kelamin</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Occupation</th>
+                            <th>Gender</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -103,8 +103,8 @@
                             <td><input type="number" id="inputUmur"></td>
                             <td><input type="text" id="inputPekerjaan"></td>
                             <td>
-                                <input type="radio" name="inputGender" value="Pria">Pria
-                                <input type="radio" name="inputGender" value="Wanita">Wanita
+                                <input type="radio" name="inputGender" value="Man">Man
+                                <input type="radio" name="inputGender" value="Woman">Woman
                             </td>
                         </tr>
                     </tbody>
@@ -120,10 +120,10 @@
                 <Table id="tabelData">
                     <thead>
                         <tr>
-                            <th>Nama</th>
-                            <th>Umur</th>
-                            <th>Pekerjaan</th>
-                            <th>Kelamin</th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Occupation</th>
+                            <th>Gender</th>
                         </tr>
                     </thead>
                     <tbody id="showdata">

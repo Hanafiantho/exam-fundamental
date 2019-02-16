@@ -1,10 +1,10 @@
 var manusia = [
-        {nama: 'Alex', umur: 22, pekerjaan: 'DEV', kelamin: 'Wanita'},
-        {nama: 'Charlee', umur: 27, pekerjaan: 'CTO', kelamin: 'Pria'},
-        {nama: 'Alicia', umur: 32, pekerjaan: 'DEV', kelamin: 'Wanita'},
-        {nama: 'Batios', umur: 33, pekerjaan: 'CEO', kelamin: 'Pria'},
-        {nama: 'Alona', umur: 26, pekerjaan: 'DEV', kelamin: 'Wanita'},
-        {nama: 'Bakhti', umur: 38, pekerjaan: 'PM', kelamin: 'Pria'}],
+        {nama: 'Alex', umur: 22, pekerjaan: 'DEV', kelamin: 'Woman'},
+        {nama: 'Charlee', umur: 27, pekerjaan: 'CTO', kelamin: 'Man'},
+        {nama: 'Alicia', umur: 32, pekerjaan: 'DEV', kelamin: 'Woman'},
+        {nama: 'Batios', umur: 33, pekerjaan: 'CEO', kelamin: 'Man'},
+        {nama: 'Alona', umur: 26, pekerjaan: 'DEV', kelamin: 'Woman'},
+        {nama: 'Bakhti', umur: 38, pekerjaan: 'PM', kelamin: 'Man'}],
     pekerjaan = ['ALL']
 
 
