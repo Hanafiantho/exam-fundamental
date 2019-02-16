@@ -19,11 +19,16 @@ tampilData = (manusia) => {
                 <td>${manusia[i].umur}</td>
                 <td>${manusia[i].pekerjaan}</td>
                 <td>${manusia[i].kelamin}</td>
+                <td>
+                    <button onclick="editData(${i})">Edit</button>
+                    <button onclick="deleteData(${i})">Delete</button>
+                </td>
             </tr>
         `
     }
 
 //Memasukan data pada manusia ke array pekerjaan
+    var pekerjaan = ['ALL']
     for (let i = 0; i < manusia.length; i++) {
         if (!pekerjaan.includes(manusia[i].pekerjaan)) {
             pekerjaan.push(manusia[i].pekerjaan)
@@ -205,5 +210,17 @@ sortKelamin = (manusia) => {
     })
 
     tampilData(manusia)
+    return
+}
+
+
+//DELETE DATA
+deleteData = (i) => {
+    var check = confirm('Are you sure?')
+    if (check == true) {
+        manusia.splice(i , 1)
+        tampilData(manusia)
+    }
+
     return
 }
