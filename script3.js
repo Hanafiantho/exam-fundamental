@@ -224,3 +224,36 @@ deleteData = (i) => {
 
     return
 }
+
+
+//EDIT DATA
+editData = (i) => {
+    var tabelData = document.getElementById('tabelData'),
+        tr = tabelData.getElementsByTagName('tr')
+
+    tr[i+1].innerHTML = `
+        <tr>
+            <td><input type="text" id="newName"></td>
+            <td><input type="number" id="newAge"></td>
+            <td><input type="text" id="newOccupation"></td>
+            <td style="font-size: 11px">
+                <input type="radio" name="editGender" value="Man">Man
+                <input type="radio" name="editGender" value="Woman">Woman
+            </td>
+            <td><button onclick="conEditData(${i})">Ok</button></td>
+        </tr>
+    `
+    return
+}
+
+conEditData = (i) => {
+    var newNama = document.getElementById('newName').value,
+        newUmur = document.getElementById('newAge').value,
+        newPekerjaan = document.getElementById('newOccupation').value,
+        newKelamin = document.querySelector('input[name=editGender]:checked').value
+    
+    manusia.splice(i, 1, {nama: newNama, umur: newUmur, pekerjaan: newPekerjaan, kelamin: newKelamin})
+
+    tampilData(manusia)
+    return
+}
