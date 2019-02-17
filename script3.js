@@ -249,7 +249,7 @@ editData = (i) => {
 conEditData = (i) => {
     var newNama = document.getElementById('newName').value,
         newUmur = document.getElementById('newAge').value,
-        newPekerjaan = document.getElementById('newOccupation').value,
+        newPekerjaan = document.getElementById('newOccupation').value.toUpperCase(),
         newKelamin = document.querySelector('input[name=editGender]:checked').value
     
     manusia.splice(i, 1, {nama: newNama, umur: newUmur, pekerjaan: newPekerjaan, kelamin: newKelamin})
